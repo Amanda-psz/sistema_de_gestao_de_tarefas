@@ -1,6 +1,6 @@
 # Sistema de gestão de tarefas
 
-Projeto ficticio desenvolvido em C# utilizando o .NET Framework 4.8. Este sistema tem como objetivo oraganizar tarefas de um determinado projeto utilizando a metodologia do Kanban.
+Projeto ficticio desenvolvido em C# utilizando o .NET Framework 4.8. Este sistema tem como objetivo oraganizar tarefas de um determinado projeto utilizando a metodologia do Kanban. Sistema referente ao simulador nível 5, da trilha de programação, da formação do programa AfroDIgital da Télos.
 
 ## Funcionalidades
 
