@@ -11,9 +11,9 @@ namespace simulador_nv5
         static void Main(string[] args)
         {
             //Listas de tarefas do sistema
-            List<string> a_fazer = new List<string> { "Testar se a página principal do projeto está rodando;", "Criar a página secundária 'Sobre' em HTML do projeto;", "Criar o CSS da págna Principal;" };
-            List<string> em_progresso = new List<string> { "Estruturar os arquivos da projeto;", "Criar a página principal em HTML do projeto;" };
-            List<string> concluido = new List<string> { "Criar o diretório principal do projeto;", "Compreender as regras de négocio do projeto;" };
+            List<string> a_fazer = new List<string> {};
+            List<string> em_progresso = new List<string> {};
+            List<string> concluido = new List<string> {};
 
             int opcao = 0;
 
@@ -77,6 +77,8 @@ namespace simulador_nv5
                             Console.WriteLine("Mover tarefa: ");
                             Console.WriteLine("1 -> Da lista 'A fazer' para lista 'Em progresso'");
                             Console.WriteLine("2 -> Da lista 'Em progresso' para lista 'Concluído'");
+                            Console.WriteLine("3 -> Da lista 'Concluído' para lista 'A fazer'");
+                            Console.WriteLine("4 -> Da lista 'Em progresso' para lista 'A fazer'");
                             string opcao_mover = Console.ReadLine();
 
                             //Move a tarefa nas listas de acordo com opção das listas escolhida
@@ -87,6 +89,12 @@ namespace simulador_nv5
                                     break;
                                 case "2":
                                     MoverTarefa(em_progresso, concluido, "Em progresso", "Concluído");
+                                    break;
+                                case "3":
+                                    MoverTarefa(concluido, a_fazer, "Concluído", "A fazer");
+                                    break ;
+                                case "4":
+                                    MoverTarefa(em_progresso, a_fazer, "Em progresso", "A fazer");
                                     break;
                                 default:
                                     Console.WriteLine("A opção escolhida é inválida!");
